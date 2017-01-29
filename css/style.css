@@ -6,7 +6,8 @@ body {
 	font-weight: normal;
     text-transform: uppercase;
     text-align: center;
-    width: 100%;
+    vertical-align: middle;
+    width: 100%;    
   }
 
   h3 {
@@ -23,5 +24,221 @@ body {
   	width: 1200px;
   	background-color: #ffffff;
   	margin: 0 auto;
+  	outline: green solid;
   } 
   
+  /*ОФОРМЛЕНИЕ ГЛАВНОЙ СТРАНИЦЫ*/
+  /*ЗАГОЛОВОК*/
+  header {
+  	outline: red solid;
+  	padding: 0;
+
+  }
+
+ul {
+	list-style: none;
+	text-decoration: none;
+	padding: 0;
+    margin: 0;			
+}
+
+ .main-navigation li {
+  	width: 20%;  	
+  	outline: yellow solid;  	
+  	padding: 15px 0;  		
+  }
+
+  .main-navigation li a {
+  	text-decoration: none;
+  	font-weight: bold;
+  	color: black;  	
+  }
+
+.main-navigation li:nth-child(1),
+.main-navigation li:nth-child(2) {
+	float: left;
+} 
+
+.main-navigation li:nth-child(3),
+.main-navigation li:nth-child(4) {
+	float: right;
+} 
+
+/*ОСНОВНОЙ БЛОК*/
+main {
+	outline: blue solid;
+}
+
+ 
+.advertise {
+	font-size: 21px;
+	font-weight: bold;
+	display: inline-block;
+	margin: 60px 300px 40px;
+	margin-top: 510px;
+}
+
+/*БЛОК 30% ОТ ШИРИНЫ РОДИТЕЛЬСКОГО КОНТЕЙНЕРА*/
+.feature {
+	width: 33.3%;		
+	outline: yellow solid;	
+}
+
+/*ПРИЧИНА №1,2 ГОЛУБОЙ БЛОК*/
+.block-blue {	
+	max-height: 256px;
+	background-color: #81b3d2;
+	color: white;
+	outline: orange solid;	
+}
+
+.image {
+	max-height: 256px;
+	width: 66.6%;	
+	outline: yellow solid;
+}
+
+.block-blue .image,
+.block-blue .feature {
+		float: left;
+}
+
+/*БЛОК С РЕКОММЕНДАЦИЯМИ*/
+.recommendations {
+	max-height: 330px;
+	outline: red solid;	
+}
+
+.recommendations .feature {
+	float: left;
+	padding-top: 61px;
+}
+
+.recommendations .feature p {
+	padding: 0 55px;
+}
+
+/*ПРИЧИНЫ №3-5, СЕРЫЙ БЛОК*/
+.block-gray {
+	max-height: 256px;
+	background-color: #eeeeee;	
+	outline: red solid;	
+	margin-bottom: 55px;
+}
+
+.block-gray .feature {
+	float: left;
+}
+
+.block-gray .feature p {
+	padding: 0 60px;
+}
+
+/* ЗАИНТЕРЕСОВАЛИСЬ? = БЛОК ДЛЯ ВЫЗОВА ФОРМЫ ЗАКАЗА*/
+.order {
+	outline: red solid;
+}
+
+.search {
+	display: inline-block;
+	width: 570px;	
+	padding: 30px 0;
+	background-color: #766357;
+	color: white;	
+}
+
+.order a {
+	text-decoration: none;	
+	font-weight: bold;
+	line-height: 26px;
+	font-size: 21px;	
+}
+
+/*ПОДВАЛ*/
+footer {
+	/*height: 120px;*/
+	outline: red solid;
+}
+
+.footer-hashtag,
+.footer-social,
+.footer-copyright {
+	width: 33.3%;
+	height: 120px;
+	float: left;
+	outline: yellow solid;
+}
+
+/*РАСПОРКА*/
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+/*ОФОРМЛЕНИЕ ВКЛАДКИ "ГОСТИНИЦЫ"*/
+/*ФОРМА С ОТБОРОЧНЫМИ КРИТЕРИЯМИ*/
+.criteria {
+	/*min-height: 217px;*/
+	outline: black solid;
+}
+
+.item-criterion {
+	width: 25%;
+	float: left;
+	outline: yellow solid;	
+}
+
+.price-criterion {
+	width: 40%;
+	float: right;
+	outline: yellow solid;
+	
+}
+
+/*КАРТОЧКА ОТЕЛЯ*/
+.hotel-card,
+.filter {
+	outline: red solid;
+	padding: 30px 73px;
+	margin: 0;
+}
+
+.hotel-stars,
+.hotel-raiting {
+	float: right;
+	outline: yellow solid;
+}
+
+.hotel-picture,
+.hotel-info,
+.hotel-booking {
+	float: left;
+	outline: yellow solid;
+}
+/*ФИЛЬТР*/
+ .filter-types li a {
+  	font-size: 12px;
+  	line-height: 18px;
+  	text-decoration: none;
+  	color: black;  	
+ }
+
+ .filter-quantity,
+ .filter-types li {  	
+  	float: left;
+  	outline: yellow solid;  	
+ }
+
+ .switch {
+  	float: right;
+  	outline: yellow solid;  	
+ }
