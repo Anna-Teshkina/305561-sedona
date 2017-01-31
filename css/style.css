@@ -6,8 +6,9 @@ body {
 	font-weight: normal;
     text-transform: uppercase;
     text-align: center;
-    vertical-align: middle;
-    width: 100%;    
+    width: 100%;     
+    margin: 0;
+    padding: 0;
   }
 
   h3 {
@@ -16,23 +17,47 @@ body {
   }
 
   h2 {
-  	font-size: 30px;
-  	line-height: 24px;
+  	font-size: 21px;
+  	line-height: 26px;
   }
 
   .main-container {
   	width: 1200px;
   	background-color: #ffffff;
   	margin: 0 auto;
+  	height: auto;
   	outline: green solid;
   } 
+
+/*СТИЛИ ДЛЯ ФОНА ГЛАВНОЙ СТРАНИЦЫ*/
+.fone{
+	max-height: 509px;
+}
+  .background {
+  	position: relative;   	
+  	/*outline: black solid;*/
+  }
+
+  .welcome {
+  	position: relative;
+  	z-index: 1;  	
+  	top: -437px;
+  	/*outline: black solid;*/
+  }
+
+  .angle {
+  	position: relative;
+  	top: -425px;
+  	z-index: 1;
+  	/*outline: black solid;*/
+  }
   
   /*ОФОРМЛЕНИЕ ГЛАВНОЙ СТРАНИЦЫ*/
   /*ЗАГОЛОВОК*/
   header {
   	outline: red solid;
   	padding: 0;
-
+  	margin: 0;
   }
 
 ul {
@@ -64,9 +89,21 @@ ul {
 	float: right;
 } 
 
+/*ЛОГОТИП*/
+.index-logo {
+	outline: orange solid;	
+	margin: 0 auto;
+	position: relative; /*Если я применяю позиционирование для логотипа то нарушается Б7?*/
+	z-index: 1;
+	height: 56px;
+	width: 138px;
+}
+
 /*ОСНОВНОЙ БЛОК*/
 main {
 	outline: blue solid;
+	padding: 0;
+  	margin: 0;
 }
 
  
@@ -74,8 +111,8 @@ main {
 	font-size: 21px;
 	font-weight: bold;
 	display: inline-block;
-	margin: 60px 300px 40px;
-	margin-top: 510px;
+	margin: 60px 300px 40px;	
+	outline: pink solid;
 }
 
 /*БЛОК 30% ОТ ШИРИНЫ РОДИТЕЛЬСКОГО КОНТЕЙНЕРА*/
@@ -187,14 +224,16 @@ html {
 /*ОФОРМЛЕНИЕ ВКЛАДКИ "ГОСТИНИЦЫ"*/
 /*ФОРМА С ОТБОРОЧНЫМИ КРИТЕРИЯМИ*/
 .criteria {
-	/*min-height: 217px;*/
+	min-height: 217px;
 	outline: black solid;
+	background: url("../img/filter backgrount_2.jpg") no-repeat;
 }
 
 .item-criterion {
 	width: 25%;
 	float: left;
-	outline: yellow solid;	
+	outline: yellow solid;
+	vertical-align: middle;	
 }
 
 .price-criterion {
@@ -205,26 +244,90 @@ html {
 }
 
 /*КАРТОЧКА ОТЕЛЯ*/
-.hotel-card,
-.filter {
+.hotel-card {
 	outline: red solid;
 	padding: 30px 73px;
 	margin: 0;
 }
 
-.hotel-stars,
-.hotel-raiting {
+.right-side {
 	float: right;
-	outline: yellow solid;
+	outline: green solid;
+	max-height: 90px;
 }
 
-.hotel-picture,
+.left-side {
+	float: left;
+	outline: green solid;
+	max-height: 90px;
+	max-width: 250px;
+}
+
 .hotel-info,
 .hotel-booking {
+	width: 110px;
+	padding: 0;
+	text-align: left;	
 	float: left;
 	outline: yellow solid;
 }
+
+.hotel-picture {
+	margin-right: 30px;
+	max-height: 90px;
+	float: left;
+	outline: yellow solid;
+}
+
+.hotel-card h2 {
+	float: left;
+	margin: 0px;	
+	outline: red solid;	
+	padding-bottom: 10px;
+}
+
+.info-details,
+.booking-details {
+	font-weight: bold;
+	color: white;
+	text-decoration: none;
+	padding: 5px 15px;
+}
+
+.info-details {
+	background-color: #81b3d2;	
+}
+
+.booking-details {
+	background-color: #766357;	
+}
+
+.type-price {
+	display: inline-block;
+	padding-bottom: 5px;
+}
+
+.hotel-raiting {
+	display: inline-block;
+	margin-top: 30px;
+	background-color: #f2f2f2;
+	padding: 5px 15px;
+	outline: yellow solid;
+}
+
+.hotel-stars {
+	text-align: right;
+	outline: yellow solid;
+}
+
 /*ФИЛЬТР*/
+.filter {
+	min-height: 87px;
+	outline: red solid;
+	padding: 30px 73px;
+	margin: 0;
+}
+
  .filter-types li a {
   	font-size: 12px;
   	line-height: 18px;
@@ -235,10 +338,36 @@ html {
  .filter-quantity,
  .filter-types li {  	
   	float: left;
+  	margin-right: 10px;
   	outline: yellow solid;  	
+ }
+
+ .filter-types li:last-child {
+ 	margin-right: 0px;
  }
 
  .switch {
   	float: right;
-  	outline: yellow solid;  	
- }
+  	outline: yellow solid;   
+  	margin-top: 20px;
+}
+
+.switch-active {
+	margin-left: 15px;
+}
+
+.up-down {
+	outline: gray solid;
+}
+
+.filter-types {
+	margin-top: 18px;
+	float: left;
+	outline: green solid;
+}
+
+.filter-quantity {
+	display: inline-block;
+	margin-right: 54px;
+
+}
