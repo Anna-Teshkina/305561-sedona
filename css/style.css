@@ -1,6 +1,6 @@
 body {
 	background-color: #f2f2f2;
-	font-family: "PT Sans";
+	font-family: "PT Sans", "Tahoma", sans-serif;
 	font-size: 14px;
 	line-height: 26px;
 	font-weight: normal;
@@ -11,14 +11,24 @@ body {
     padding: 0;
   }
 
+  h2 {
+  	font-size: 30px;
+  	line-height: 24px;
+  }
+
   h3 {
+  	font-size: 21px;
+  	line-height: 26px;
+  }
+
+  h4 {
   	font-size: 21px;
   	line-height: 21px;
   }
 
-  h2 {
-  	font-size: 21px;
-  	line-height: 26px;
+  h5 {
+  	font-size: 16px;
+  	line-height: 21px;
   }
 
   .main-container {
@@ -26,28 +36,37 @@ body {
   	background-color: #ffffff;
   	margin: 0 auto;
   	height: auto;
-  	outline: green solid;
+  	/*outline: green solid;*/
+  	/*не знаю как корректно взять параметры тени из фотошопа:*/
+  	box-shadow: 0px 0px 20px 1px #cccbcb; 
   } 
 
 /*СТИЛИ ДЛЯ ФОНА ГЛАВНОЙ СТРАНИЦЫ*/
-.fone{
-	max-height: 509px;
+.fone {
+	height: 509px;
+	/*outline: red solid;*/
+	position: relative;
 }
   .background {
-  	position: relative;   	
+  	position: absolute;  
+  	top: 0px;
+  	left: 0px; 
+  	z-index: 0;	
   	/*outline: black solid;*/
   }
 
   .welcome {
-  	position: relative;
-  	z-index: 1;  	
-  	top: -437px;
+  	position: absolute;
+  	z-index: 1;  
+  	top: 76px;	
+  	left: 371px;
   	/*outline: black solid;*/
   }
 
   .angle {
-  	position: relative;
-  	top: -425px;
+  	position: absolute;
+  	top: 451px;
+  	left: 0px;
   	z-index: 1;
   	/*outline: black solid;*/
   }
@@ -55,22 +74,22 @@ body {
   /*ОФОРМЛЕНИЕ ГЛАВНОЙ СТРАНИЦЫ*/
   /*ЗАГОЛОВОК*/
   header {
-  	outline: red solid;
+  	/*outline: red solid;*/
   	padding: 0;
   	margin: 0;
   }
 
-ul {
-	list-style: none;
-	text-decoration: none;
+.main-navigation ul {
+	list-style: none;	
 	padding: 0;
     margin: 0;			
 }
 
  .main-navigation li {
+ 	font-weight: bold;
   	width: 20%;  	
-  	outline: yellow solid;  	
-  	padding: 15px 0;  		
+  	/*outline: yellow solid;*/
+  	padding: 14px 0;  		
   }
 
   .main-navigation li a {
@@ -79,46 +98,76 @@ ul {
   	color: black;  	
   }
 
-.main-navigation li:nth-child(1),
-.main-navigation li:nth-child(2) {
+  .main-navigation li:nth-child(n) a {
+  	padding-left: 72px;
+  }
+
+  .main-navigation li:nth-child(2n) a {
+  	padding-right: 72px;
+  }
+
+  .main-navigation li a:hover {
+  	color: #81b3d2;
+  }
+
+  .main-navigation li a:active {
+  	color: #cacaca;
+  }
+
+.main-navigation li .main-navigation-active,
+.main-navigation li .main-navigation-active:hover,
+.main-navigation li .main-navigation-active:active {
+	color: #766357;
+}
+
+.main-navigation li:nth-child(n) {
+	text-align: left;
 	float: left;
 } 
 
-.main-navigation li:nth-child(3),
-.main-navigation li:nth-child(4) {
+.main-navigation li:nth-child(2n) {
+	text-align: right; 
 	float: right;
-} 
+}
 
 /*ЛОГОТИП*/
 .index-logo {
-	outline: orange solid;	
+	/*outline: orange solid;*/	
 	margin: 0 auto;
 	position: relative; /*Если я применяю позиционирование для логотипа то нарушается Б7?*/
+	top: 0px;
 	z-index: 1;
 	height: 56px;
-	width: 138px;
+	width: 238px;
 }
 
 /*ОСНОВНОЙ БЛОК*/
 main {
-	outline: blue solid;
+	/*outline: blue solid;*/
 	padding: 0;
   	margin: 0;
 }
 
- 
-.advertise {
+ .advertise {
+ 	max-width: 576px;
+ 	margin: 0 auto;
+ 	/*outline: yellow solid;*/
+ 	margin-bottom: 51px;
+ 	margin-top: 59px;
+ }
+
+.advertise span {
+	display: block;
 	font-size: 21px;
 	font-weight: bold;
-	display: inline-block;
-	margin: 60px 300px 40px;	
-	outline: pink solid;
+	margin-bottom: 27px;
+	/*outline: pink solid;*/
 }
 
 /*БЛОК 30% ОТ ШИРИНЫ РОДИТЕЛЬСКОГО КОНТЕЙНЕРА*/
 .feature {
 	width: 33.3%;		
-	outline: yellow solid;	
+	/*outline: yellow solid;*/
 }
 
 /*ПРИЧИНА №1,2 ГОЛУБОЙ БЛОК*/
@@ -126,60 +175,100 @@ main {
 	max-height: 256px;
 	background-color: #81b3d2;
 	color: white;
-	outline: orange solid;	
+	/*outline: orange solid;*/
 }
 
 .image {
 	max-height: 256px;
 	width: 66.6%;	
-	outline: yellow solid;
+	/*outline: yellow solid;*/
 }
 
 .block-blue .image,
 .block-blue .feature {
-		float: left;
+	float: left;
+}
+.block-blue .feature h4 {
+	margin-top: 55px;
+	padding: 0 125px;
+	margin-bottom: 21px;
+	/*outline: yellow solid;*/
+}
+
+.block-blue .feature p {
+	/*outline: solid green;*/
+	line-height: 21px;
+	margin-top: 20px;
+	padding: 0 47px;
 }
 
 /*БЛОК С РЕКОММЕНДАЦИЯМИ*/
 .recommendations {
-	max-height: 330px;
-	outline: red solid;	
+	min-height: 330px;
+	/*outline: red solid;*/
 }
 
 .recommendations .feature {
 	float: left;
-	padding-top: 61px;
+	padding-top: 55px;
+}
+
+.recommendations .feature h4 {
+	margin-top: 22px;
+	margin-bottom: 24px;
 }
 
 .recommendations .feature p {
+	line-height: 21px;
 	padding: 0 55px;
 }
 
 /*ПРИЧИНЫ №3-5, СЕРЫЙ БЛОК*/
 .block-gray {
-	max-height: 256px;
+	min-height: 256px;
 	background-color: #eeeeee;	
-	outline: red solid;	
-	margin-bottom: 55px;
+	/*outline: red solid;*/
+	margin-bottom: 56px;
 }
 
 .block-gray .feature {
 	float: left;
 }
 
+.block-gray .feature h4 {
+	margin-top: 48px;
+	margin-bottom: 21px;
+	padding: 0 130px;
+	/*outline: yellow solid;*/
+}
+
 .block-gray .feature p {
+	margin-top: 18px;
 	padding: 0 60px;
+	line-height: 21px;
+	/*outline: red solid;*/
 }
 
 /* ЗАИНТЕРЕСОВАЛИСЬ? = БЛОК ДЛЯ ВЫЗОВА ФОРМЫ ЗАКАЗА*/
 .order {
-	outline: red solid;
+	/*outline: red solid;*/
+	position: relative;
+	z-index: 0;
+}
+.order h2 {
+	margin-bottom: 30px;
 }
 
-.search {
+.order p {
+	line-height: 24px;
+	margin-bottom: 48px;
+}
+
+.order .search {
 	display: inline-block;
-	width: 570px;	
-	padding: 30px 0;
+	vertical-align: top;
+	min-width: 568px;	
+	padding: 31px 0;
 	background-color: #766357;
 	color: white;	
 }
@@ -187,24 +276,367 @@ main {
 .order a {
 	text-decoration: none;	
 	font-weight: bold;
-	line-height: 26px;
+	line-height: 25px;
 	font-size: 21px;	
 }
 
+.modal-order-form {
+	position: absolute;
+	z-index: 1;
+	top: 235px;
+	left: 315px;
+	width: 568px;
+	min-height: 396px;
+	padding: 55px;
+	background-color: white;
+	/*outline: red solid;*/
+}
+
+.modal-order-form table {
+	text-align: left; 
+	font-weight: bold;
+	line-height: 26px;
+	font-size: 14px;
+	margin: 0px;
+	padding: 0px;
+}
+
+.modal-order-form td {
+	width: 115.3px;
+	/*border: 2px solid gray;
+	border-collapse: collapse;*/
+}
+
+/*первая колонка*/
+.first-column {
+	width: 111px;
+	vertical-align: top;
+	padding-top: 6px;
+}
+
+.third-column {
+	vertical-align: top;
+	text-align: right;
+	padding-top: 6px;
+	padding-right: 25px;
+}
+
+.modal-order-form tr:nth-child(1) td:nth-child(2),
+.modal-order-form tr:nth-child(2) td:nth-child(2) {
+	position: relative;
+}
+
+
+.calendar {
+	display: block;
+	position: absolute;
+	width: 21px;
+	height: 22px;
+	background-image: url("../img/main-sprite.png");
+	background-repeat: no-repeat;
+	background-position: -67px -5px;
+	right: 9px;
+	top: 8px;
+}
+
+.calendar:hover {
+	background-position: -5px -5px;
+}
+
+.calendar:active {
+	background-position: -36px -5px;
+}
+
+.long, .short {	
+	font-size: 14px;
+	line-height: 28px;
+	font: inherit;
+	text-transform: uppercase;
+	border: none;
+}
+
+.long {
+	width: 346px;
+	padding-right: 40px;
+	padding-left: 13px;
+	margin-bottom: 30px;
+	height: 38px;
+	right: 0;
+	background-color: #f2f2f2;
+}
+
+.long:hover {
+	background-color: #ebebeb;
+}
+
+.long:focus {
+	background-color: white;
+	outline: 1px solid #e5e5e5;
+}
+
+.people-quantity {
+	padding: 0;
+	background: yellow;
+	height: 38px;
+	width: 115.3px;
+	background-color: #f2f2f2;
+}
+
+.short {
+	margin: 0;
+	padding-left: 4px;
+	width: 33px;
+	height: 38px;
+	background: #f2f2f2;
+	display: inline-block;
+	vertical-align: top;
+	text-align: center; 
+	color: black;
+	/*margin-right: -3px;*/
+	/*outline: green solid;*/
+}
+
+.p-quantity {
+	display: inline-block;
+	vertical-align: top;
+	width: 37px;
+	height: 38px;
+	background: #f2f2f2;
+	/*margin-right: -4px;*/
+	border: none;
+	/*outline: green solid;*/
+	position: relative;
+}
+
+.p-quantity::before,
+.p-quantity::after {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background-repeat: no-repeat;
+}
+
+/*уменьшить кол-во человек*/
+.minus::before {
+	position: absolute;
+	width: 12px;
+    height: 3px;
+    background-color: #a9a9a9;
+    transform: translate(-6px, -1.5px);
+}
+
+.minus:hover::before {
+	background-color: #000000;
+}
+
+.minus:active::before {
+	background-color: #81b3d2;
+}
+
+/*увеличить кол-во человек*/
+.plus {	
+	margin-right: -5px;
+}
+
+.plus::before,
+.plus::after {
+	content: "";
+	position: absolute;
+	width: 12px;
+    height: 3px;
+    top: 17px;
+    left: 13.5px;
+    background-color: #a9a9a9;
+
+}
+
+.plus::after {
+	transform: rotate(90deg);
+}
+
+.plus:hover::before,
+.plus:hover::after {
+	background-color: #000000;
+}
+
+.plus:active::before,
+.plus:active::after {
+	background-color: #81b3d2;
+}
+
+/*кнопка Найти*/
+.modal-search {
+	display: block;
+	font: inherit;
+	text-transform: uppercase;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+	color: white;
+	height: 58px;
+	width: 458px;
+	margin: 0 auto;
+	margin-top: 54px;
+	background-color: #81b3d2;
+	border: none;
+}
+
+.modal-search:hover {
+	background-color: #669ec0;
+}
+
+.modal-search:focus {
+	background-color: #5496bd;
+	color: #88b6d1;
+	outline: 1px #5496bd solid;
+}
+/*КАРТА*/
+.map {
+	margin-bottom: 0px;
+	height: 473px;
+	/*outline: 1px green solid;*/
+}
+
 /*ПОДВАЛ*/
-footer {
-	/*height: 120px;*/
-	outline: red solid;
+.main-footer {
+	min-height: 120px;
+	/*outline: red solid;*/
+}
+
+.footer-hashtag a {
+	text-decoration: none;
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+	color: black;
+	/*outline: red solid;*/
+}
+
+.footer-hashtag {
+	padding-top: 45px;
+}
+
+.footer-social {
+	padding-top: 34px;
+}
+
+.footer-copyright {
+	position: relative;
+	text-align: left;
+}
+
+.creator {
+	display: inline-block;
+	vertical-align: top;
+	/*outline: blue solid;*/
+	margin-top: 44px;
+	margin-left: 103px;
+	line-height: 26px;
+	font-size: 14px;
+}
+
+.btn {
+	position: absolute;
+	top: 39px;
+	left: 184px;
+	/*outline: green solid;*/
+	background-image: url("../img/html-ac-sprite1.png");
+	background-position: -266px -8px;
+    background-repeat: no-repeat;
+    display: block;
+    font-size: 0px;
+    width: 113px;
+    height: 39px;
+}
+
+.btn:hover {
+	background-position: -8px -8px;
+}
+
+.btn:active {
+	background-position: -137px -8px;
 }
 
 .footer-hashtag,
 .footer-social,
 .footer-copyright {
 	width: 33.3%;
-	height: 120px;
 	float: left;
-	outline: yellow solid;
+	/*outline: yellow solid;*/
 }
+
+.social-btn {
+  	display: inline-block;
+  	width: 46px;
+  	height: 48px;
+  	margin-right: 2px;
+ 	/* margin-top: 27px;*/
+  	font-size: 0;
+  	vertical-align: top;
+  	text-decoration: none;
+  	background-color: #81b3d2; 
+  	position: relative;
+  	/*outline: green solid;*/
+}
+
+.social-btn:hover {
+	background-color: #669ec0;
+}
+
+.social-btn:active {
+	background-color: #5496bd;
+}
+
+.social-btn::before {
+	content: "";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	/*transform: translate(-50%; -50%); - почему-то не работает с %*/
+	background-image: url("../img/main-sprite.png");
+	background-repeat: no-repeat;
+	/*width: 10px;
+	height: 10px;
+	background-color: red;*/
+}
+
+/*Twitter*/
+.social-btn-tw::before {
+	width: 17px;
+    height: 15px;
+    background-position: -5px -106px;
+    transform: translate(-8.5px, -7.5px);
+}
+
+.social-btn-tw:active::before {
+    background-position: -32px -106px;
+}
+
+/*Facebook*/
+.social-btn-fb::before {
+	width: 10px;
+    height: 19px;
+    background-position: -86px -77px;
+    transform: translate(-5px, -9.5px);
+}
+
+.social-btn-fb:active::before {
+    background-position: -106px -77px;
+}
+
+/*Youtube*/
+.social-btn-yt::before {
+	width: 20px;
+    height: 16px;
+    background-position: -130px -5px;
+    transform: translate(-10px, -8px);
+}
+
+.social-btn-yt:active::before {
+    background-position: -130px -31px;
+}
+
 
 /*РАСПОРКА*/
 .clearfix::after {
@@ -213,6 +645,7 @@ footer {
 	clear: both;
 }
 
+/*BOX-SIZING*/
 *, *::before, *::after {
 	box-sizing: inherit;
 }
@@ -225,65 +658,281 @@ html {
 /*ФОРМА С ОТБОРОЧНЫМИ КРИТЕРИЯМИ*/
 .criteria {
 	min-height: 217px;
-	outline: black solid;
-	background: url("../img/filter-backgrount-2.jpg") no-repeat;
+	/*outline: black solid;*/
+	padding: 0px 71px;
+	background: url("../img/filter-background-3.jpg") no-repeat;
+	color: #ffffff;
 }
 
 .item-criterion {
-	width: 25%;
+	width: 255px;
 	float: left;
-	outline: yellow solid;
+	/*outline: yellow solid;*/
 	vertical-align: middle;	
+	text-align: left;
+	margin: 0;
+	padding: 0;
 }
 
+.item-criterion h5 {
+	margin-bottom: 25px;
+}
+
+.item-criterion input[type="checkbox"] {
+	display: none;
+}
+
+
+.item-criterion input[type="checkbox"] + label {
+	display: block;
+	/*margin: 10px 0px;*/
+	line-height: 20px;
+	padding-left: 42px;
+	padding-bottom: 25px;
+	position: relative;
+	cursor: pointer;
+}
+
+.item-criterion input[type="checkbox"]+ label::before {
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	width: 26px;
+    height: 22px;
+    background-image: url("../img/main-sprite.png");
+    background-repeat: no-repeat;
+    background-position: -98px -5px;
+}
+
+.item-criterion input[type="checkbox"]:checked+ label::before {
+    background-position: -5px -37px;
+}
+
+.item-criterion input[type="checkbox"]:checked:active + label::before {
+	background-position: -98px -5px;
+}
+
+.item-criterion input[type="checkbox"]:active + label::before {
+	background-position: 5px -37px;
+}
+
+.item-criterion input[type="checkbox"]:disabled + label::before {
+	background-position: -41px -37px;
+}
+
+.item-criterion input[type="checkbox"]:checked:disabled + label::before {
+	background-position: -73px -37px;
+}
+
+/*ВКЛАДКА HOTELS - ЦЕНОВОЙ ФИЛЬТР*/
 .price-criterion {
-	width: 40%;
+	width: 328px;
 	float: right;
-	outline: yellow solid;
-	
+	/*outline: yellow solid;*/
+	text-align: left;
+}
+
+.price-criterion h5 {
+  	margin-bottom: 9px;
+
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+}
+
+.price-controls {
+    position: relative;
+  
+    height: 36px;
+    margin-left: 10px;
+    margin-bottom: 20px;
+
+    font-size: 0;
+
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+}
+
+.price-controls::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    width: 2px;
+    height: 22px;
+
+    background: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  	display: inline-block;
+
+  	font-size: 14px;
+  	line-height: 38px;
+  	vertical-align: top;
+
+  	cursor: pointer;
+}
+
+.price-controls .min-price,
+.price-controls .max-price {
+  	height: 36px;
+  	width: 157px;
+  	/*outline: red solid;*/
+}
+
+.price-controls .min-price {
+	padding-left: 65px;
+}
+
+.price-controls .max-price {
+	padding-left: 52px;
+}
+
+.price-controls input {
+  	width: 50px;
+ 	height: 36px;
+ 	margin: 0;
+
+  	color: inherit;
+  	font: inherit;
+
+  	background: none;
+  	border: none;
+  	/*outline: grey solid;*/
+}
+
+.range-controls {
+  	position: relative;
+
+  	margin-bottom: 32px;
+  	margin-left: 11px;
+}
+
+.range-controls .scale {
+  	height: 2px;
+
+ 	background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  	width: 80%;
+  	height: 2px;
+
+  	background: #ffffff;
+}
+
+.range-toggle {
+  	position: absolute;
+  	top: -9px;
+
+  	width: 20px;
+  	height: 20px;
+
+  	background: #ababab;  
+  	border: 8px solid #ffffff;
+  	border-radius: 50%;
+  	box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  	cursor: pointer;
+}
+
+.range-toggle:hover {
+  	background: #1c4f80;
+}
+
+.range-toggle-min {
+  	left: 0;
+}
+
+.range-toggle-max {
+  	left: 80%;
+}
+
+.btn-transparent {
+  	display: block;
+  	margin: 0 auto;
+  	padding: 6px 35px;
+
+  	font-size: 14px;
+  	line-height: 20px;
+  	color: #ffffff;
+  	text-transform: uppercase;
+
+  	background: transparent;
+  	border: 2px solid #ffffff;
+  	border-radius: 2px;
+  	cursor: pointer;
+}
+
+.btn-transparent:hover {
+  	color: #000000;
+
+  	background: #ffffff;
 }
 
 /*КАРТОЧКА ОТЕЛЯ*/
 .hotel-card {
-	outline: red solid;
-	padding: 30px 73px;
-	margin: 0;
+	/*outline: red solid;*/
+	padding: 0px 71px 24px 73px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.left-side .hotel-name {
+	text-decoration: none;
+	color: black;
+}
+
+.hotel-name:hover {
+	color: #81b3d2;
+}
+
+.hotel-name:active {
+	color: #cacaca;
 }
 
 .right-side {
 	float: right;
-	outline: green solid;
+	margin-top: 25px;
+	/*outline: green solid;*/
 	max-height: 90px;
 }
 
 .left-side {
 	float: left;
-	outline: green solid;
-	max-height: 90px;
-	max-width: 250px;
+	margin-top: 26px;
+	/*outline: green solid;*/
+	min-height: 100px;
+	min-width: 250px;
 }
 
 .hotel-info,
 .hotel-booking {
-	width: 110px;
+	width: 113px;
 	padding: 0;
 	text-align: left;	
 	float: left;
-	outline: yellow solid;
+	margin-right: 2px;
+	/*outline: yellow solid;*/
 }
 
 .hotel-picture {
+	margin-top: 30px;
 	margin-right: 30px;
 	max-height: 90px;
 	float: left;
-	outline: yellow solid;
+	/*outline: yellow solid;*/
 }
 
-.hotel-card h2 {
-	float: left;
+.hotel-card h3 {
+	text-align: left;
+	line-height: 21px;
 	margin: 0px;	
-	outline: red solid;	
-	padding-bottom: 10px;
+	/*outline: red solid;*/
+	padding-bottom: 8px;
 }
 
 .info-details,
@@ -291,83 +940,184 @@ html {
 	font-weight: bold;
 	color: white;
 	text-decoration: none;
-	padding: 5px 15px;
+	padding: 4.5px 17px;
 }
-
+/*кнопка ПОДРОБНЕЕ*/
 .info-details {
 	background-color: #81b3d2;	
 }
 
+.info-details:hover {
+	background-color: #669ec0;
+}
+
+.info-details:active {
+	background-color: #5496bd;
+	color: #94b9d2;
+}
+/*кнопка ЗАБРОНИРОВАТЬ*/
 .booking-details {
 	background-color: #766357;	
 }
 
+.booking-details:hover {
+	background-color: #604e43;
+}
+
+.booking-details:active {
+	background-color: #503e33;
+	color: #928a85;
+}
+
 .type-price {
 	display: inline-block;
-	padding-bottom: 5px;
+	padding-bottom: 13px;
 }
 
 .hotel-raiting {
 	display: inline-block;
-	margin-top: 30px;
+	vertical-align: top;
+	margin-top: 38px;
 	background-color: #f2f2f2;
-	padding: 5px 15px;
-	outline: yellow solid;
+	padding: 1.5px 15px;
+	/*outline: yellow solid;*/
 }
 
 .hotel-stars {
 	text-align: right;
-	outline: yellow solid;
+	margin-top: 3px;
+	margin-left: 6px;
+	/*outline: yellow solid;*/
 }
 
-/*ФИЛЬТР*/
+/*ФИЛЬТР: кол-во результатов поиска/ сортировка/ навигационные клавиши*/
 .filter {
 	min-height: 87px;
-	outline: red solid;
-	padding: 30px 73px;
-	margin: 0;
+	/*outline: pink solid;*/
+	padding: 0px 73px;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.filter ul {
+	list-style: none;	
+} 
+
+.filter-quantity {
+	float: left;
+	margin-top: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 47px;
+	/*outline: green solid;*/
+}
+
+.filter-types {
+	margin-top: 30px;	
+	padding: 0;
+	float: left;
+	/*outline: green solid;*/
+}
+
+.filter .filter-types .type-active {
+	color: #81b3d2;
+	border: none;
 }
 
  .filter-types li a {
   	font-size: 12px;
   	line-height: 18px;
-  	text-decoration: none;
-  	color: black;  	
+  	text-decoration: none;  	
  }
 
- .filter-quantity,
+ .filter-types li:first-child {
+ 	margin-right: 35px;
+ }
+
  .filter-types li {  	
-  	float: left;
-  	margin-right: 10px;
-  	outline: yellow solid;  	
+ 	display: inline-block;
+  	margin-right: 30px;
+  	/*outline: yellow solid; */	
  }
 
  .filter-types li:last-child {
  	margin-right: 0px;
  }
 
+ .filter-types li:first-child a {
+ 	color: black;
+ }
+
+ .filter-types li:nth-child(2) a,
+ .filter-types li:nth-child(3) a,
+ .filter-types li:nth-child(4) a {
+ 	color: #cacaca;
+ 	border-bottom: 1px dotted #81b3d2;
+ }
+
+ .filter-types li:nth-child(2):hover a,
+ .filter-types li:nth-child(3):hover a,
+ .filter-types li:nth-child(4):hover a {
+ 	color: #81b3d2;
+ 	border-bottom: 1px dotted #81b3d2;
+ }
+
+.filter-types li:nth-child(2):active a,
+.filter-types li:nth-child(3):active a,
+.filter-types li:nth-child(4):active a {
+ 	color: #000000;
+ 	border: none;
+ }
+
  .switch {
   	float: right;
-  	outline: yellow solid;   
-  	margin-top: 20px;
+  	/*outline: yellow solid;*/
+  	margin-top: 30px;
 }
 
-.switch-active {
-	margin-left: 15px;
-}
-
-.up-down {
-	outline: gray solid;
-}
-
-.filter-types {
-	margin-top: 18px;
-	float: left;
-	outline: green solid;
-}
-
-.filter-quantity {
+.switch a {
 	display: inline-block;
-	margin-right: 54px;
+	vertical-align: middle;
+	margin-left: 12px;
+}
 
+.switch .active {
+	background-position: -109px -57px;
+}
+
+.up,
+.down {
+	width: 11px;
+    height: 10px;
+	/*outline: gray solid;*/
+	background-image: url("../img/main-sprite.png");
+	background-repeat: no-repeat;
+}
+
+.up {
+	background-position: -101px -106px;
+	/*outline: green solid;*/
+	padding-right: 12px;
+}
+
+.up:hover {
+	background-position: -59px -106px;
+}
+
+.up:active {
+	background-position: -80px -106px;
+}
+
+
+.down {
+	background-position: -65px -77px;
+	/*outline: red solid;*/
+	/*margin-right: 12px;*/
+}
+
+.down:hover {
+	background-position: -109px -37px;
+}
+
+.down:active {
+	background-position: -109px -57px;
 }

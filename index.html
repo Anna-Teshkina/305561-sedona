@@ -1,143 +1,185 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
-    <link href="css/style.css" rel="stylesheet">
-  </head>
-  <body>
-  	<div class="main-container"><!--Контейнер белого цвета, ширины не более 1200px -->
-  		<header class="main-header clearfix">
-   	        <nav class="main-navigation">
-	          	<ul>
-	            	<li>
-	              		<a href="#">Информация</a>
-	            	</li>
-	            	<li>
-	              		<a href="#">Фото и видео</a>
-	            	</li>	            	
-	            	<li>
-	              		<a href="hotels.html">Гостиницы</a>
-	            	</li>
-	            	<li>
-	              		<a href="#">Карта штата</a>
-	            	</li>
-	          	</ul>
-	        </nav>
-	        <div class="index-logo">
-	        	<img src="img/sedona-logo.png" alt="Логотип">
-	        </div>	 
-	    </header>
+  	<head>
+    	<meta charset="utf-8">
+    	<title>HTML Academy: Седона</title>
+    		<!--<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,
+    		700&amp;subset=cyrillic" rel="stylesheet">-->
+    	<link href="fonts/ptsans.woff2, ptsansbold.woff2" rel="stylesheet">
+    	<link href="css/normalize.css" rel="stylesheet">
+    	<link href="css/style.css" rel="stylesheet">
+  	</head>
+  	<body>
+  		<div class="main-container"><!--Контейнер белого цвета, ширины не более 1200px -->
+  			<header class="main-header clearfix">
+	   	        <nav class="main-navigation">
+		          	<ul>
+		            	<li>
+		              		<a href="#">Информация</a>
+		            	</li>
+		            	<li>
+		              		<a href="hotels.html">Гостиницы</a>
+		            	</li>
+		            	<li>
+		              		<a href="#">Фото и видео</a>
+		            	</li>       	
+		            	<li>
+		              		<a href="#">Карта штата</a>
+		            	</li>
+		          	</ul>
+		        </nav>
+		        <div class="index-logo">
+		        	<img src="img/sedona-logo.png" alt="Логотип">
+		        </div>	 
+	    	</header>
 	    
-	    <main>   
-	    	<div class="fone">
-		    	<img  class="background" src="img/background-photo-2.jpg" alt="Горы">
-		    	<img class="welcome" src="img/welcome.png" alt="Надпись">
-		     	<img class="angle" src="img/angle.png" alt="Уголок">
-	    	</div>
-	    	<p>
-	    	  	<span class="advertise">Седона - небольшой городок в Аризоне, заслуживающий большего!</span>
-	    		Рассмотрим 5 причин, по которым Седона круче, чем Гран Каньон!
-	    	</p>	    	    	
-	    	<div class="block-blue clearfix"> <!--Ширина 100%, высота-заданная, фон-голубой, цвет шрифта-белый-->
-	    		<div class="feature"> <!--Блок с шириной 30% от родительского-->
-	    			<h3>Настоящий городок</h3>
-	    			<span>-№1-</span>			    			
-			    	<p>Седона - не аттракцион для туристов, там течет своя жизнь</p>		    		
-	    		</div>
-	    		<!--Класс image-задает размер две трети от родительского блока-->	    		
-	    		<div class="image"> 
-	    			<img src="img/reason-1.jpg" alt="Изображение-1">
-	    		</div>
-	    	</div>	
-
-	    	<div class="recommendations clearfix"> <!--Ширина 100%, высота-заданная, фон-прозрачный, 
-	    	цвет шрифта-черный-->
-	    		<div class="feature"><!--Блок с шириной 30% от родительского-->
-	    			<img src="img/house.png" alt="Жилье">   		
-					<h3>Жилье</h3>	    				
-	    			<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>		
-	   			</div>
-	    		<div class="feature"><!--Блок с шириной 30% от родительского-->
-	    			<img src="img/food.png" alt="Еда">
-	    			<h3>Еда</h3>
-					<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>	
-	     		</div>
-	    		<div class="feature"><!--Блок с шириной 30% от родительского-->
-	    			<img src="img/souvenirs.png" alt="Сувениры">
-					<h3>Сувениры</h3>
-	    			<p>Не только китайского, но и местного производства!</p>	    			
-	    		</div>
-	    	</div>
-
-	    	<div class="block-blue clearfix"> <!--Ширина 100%, высота-заданная, фон-голубой, цвет шрифта-белый-->
-	    	 	<!--Класс image-задает размер две трети от родительского блока-->
-	    		<div class="image">
-	    			<img src="img/reason-2.jpg" alt="Изображение-2">
-	    		</div>
-	    		<div class="feature"> <!--Блок с шириной 30% от родительского-->
-	    			<h3>Там есть мост дьявола</h3>	    			
-	    			<span>-№2-</span>			
-				    <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>		    		
-	    		</div>
-	    	</div>	
-
-	    	<div class="block-gray clearfix"><!--Блок-3: фон-серый, ширина 100% родительского блока, цвет шрифта-черный-->
-	    		<div class="feature"> <!--Блок с шириной 30% от родительского-->
-	    			<h3>Небольшая площадь</h3>
-	    			<span>-№3-</span>
-			    	<p>Все достопримечательности находятся очень близко</p>		    		
-	    		</div>
-	    		<div class="feature"> <!--Блок с шириной 30% от родительского-->
-	    			<h3>Красивая дорога</h3>	    			
-		    		<span>-№4-</span>
-			    	<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+		    <main>   
+		    	<div class="fone">
+			    	<img  class="background" src="img/background-photo-5.jpg" alt="Горы">
+			    	<img class="welcome" src="img/welcome.png" alt="Надпись">
+			     	<img class="angle" src="img/angle.png" alt="Уголок">
 		    	</div>
-	    		<div class="feature"> <!--Блок с шириной 30% от родительского-->
-	    			<h3>Мало туристов</h3>	    			
-		    		<span>-№5-</span>
-			    	<p>Большинство едет в Гранд каньон и толпится там</p>		    		
-	    		</div>
-	    	</div>
-	    	<div class="order"><!--Ширина 100%, высота-заданная, фон-прозрачный, цвет шрифта-черный-->					
-				<h2>Заинтересовались?</h2>
-				<p>Укажите предполагаемые даты поездки,
-				и мы покажем вам лучшие предложения гостиниц в Седоне</p>
-				<a class="search" href="#">Поиск гостиницы в Седоне</a>
-				<form class="order-form" action="#" method="post">
-				<!--Пока не сделано -->
-      			</form>				
-			</div>
-			<div class="map">
-				<img src="img/map.jpg" alt="Изображение карты">
-			</div>
-      	</main>   
-               
-        <footer class="main-footer clearfix">
-	      	<div class="container">
-	        	<section class="footer-hashtag">
-	          		<a href="#">#visitsedona</a>
-	        	</section>
-	        	<section class="footer-social">
-		        	<a class="social-btn social-btn-tw" href="#">
-		        		<img src="img/t-logo.png" alt="Twitter">
-		        	</a>
-		        	<a class="social-btn social-btn-fb" href="#">
-		        		<img src="img/f-logo.png" alt="Facebook">
-		        	</a>
-		        	<a class="social-btn social-btn-yt" href="#">
-		        		<img src="img/y-logo.png" alt="YouTube">
-		        	</a>
-	        	</section>
-	        	<section class="footer-copyright">
-	          		<span class="creator">Website by:</span>
-	          		<a class="btn" href="https://htmlacademy.ru">
-	          			<img src="img/HTMLacademy-logo.png" alt="HTML Academy">
-	          		</a>
-	        	</section>
-	      	</div>
-	    </footer>
+		    	<p class="advertise">
+		    	  	<span>Седона &#8212; небольшой городок в Аризоне, заслуживающий большего! </span>
+		    		Рассмотрим 5 причин, по которым Седона круче, чем Гран Каньон!
+		    	</p>	    	    	
+		    	<div class="block-blue clearfix"> <!--Ширина 100%, высота-заданная, фон-голубой, цвет шрифта-белый-->
+		    		<div class="feature"> <!--Блок с шириной 30% от родительского-->
+		    			<h4>Настоящий городок</h4>
+		    			<span>&#8212; №1 &#8212;</span>			    			
+				    	<p>Седона &#8212; не аттракцион для туристов, <br>
+				    	там течет своя жизнь</p>		    		
+		    		</div>
+		    		<!--Класс image-задает размер две трети от родительского блока-->	    		
+		    		<div class="image"> 
+		    			<img src="img/reason-1.jpg" alt="Изображение-1">
+		    		</div>
+		    	</div>	
 
-  	</div>
-  </body>
+		    	<div class="recommendations clearfix"> <!--Ширина 100%, высота-заданная, фон-прозрачный, 
+		    	цвет шрифта-черный-->
+		    		<div class="feature"><!--Блок с шириной 30% от родительского-->
+		    			<img src="img/house1.png" alt="Жилье">   		
+						<h4>Жилье</h4>	    				
+		    			<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>		
+		   			</div>
+		    		<div class="feature"><!--Блок с шириной 30% от родительского-->
+		    			<img src="img/food1.png" alt="Еда">
+		    			<h4>Еда</h4>
+						<p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>	
+		     		</div>
+		    		<div class="feature"><!--Блок с шириной 30% от родительского-->
+		    			<img src="img/souvenirs1.png" alt="Сувениры">
+						<h4>Сувениры</h4>
+		    			<p>Не только китайского, но и местного производства!</p>	    			
+		    		</div>
+		    	</div>
+
+		    	<div class="block-blue clearfix"> <!--Ширина 100%, высота-заданная, фон-голубой, цвет шрифта-белый-->
+		    	 	<!--Класс image-задает размер две трети от родительского блока-->
+		    		<div class="image">
+		    			<img src="img/reason-2.jpg" alt="Изображение-2">
+		    		</div>
+		    		<div class="feature"> <!--Блок с шириной 30% от родительского-->
+		    			<h4>Там есть мост дьявола</h4>	    			
+		    			<span>&#8212; №2 &#8212;</span>			
+					    <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>		    		
+		    		</div>
+		    	</div>	
+
+		    	<div class="block-gray clearfix"><!--Блок-3: фон-серый, ширина 100% родительского блока, цвет шрифта-черный-->
+		    		<div class="feature"> <!--Блок с шириной 30% от родительского-->
+		    			<h4>Небольшая площадь</h4>
+		    			<span>&#8212; №3 &#8212;</span>
+				    	<p>Все достопримечательности находятся очень близко</p>		    		
+		    		</div>
+		    		<div class="feature"> <!--Блок с шириной 30% от родительского-->
+		    			<h4>Красивая дорога</h4>	    			
+			    		<span>&#8212; №4 &#8212;</span>
+				    	<p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+			    	</div>
+		    		<div class="feature"> <!--Блок с шириной 30% от родительского-->
+		    			<h4>Мало туристов</h4>	    			
+			    		<span>&#8212; №5 &#8212;</span>
+				    	<p>Большинство едет в Гранд каньон и толпится там</p>		    		
+		    		</div>
+		    	</div>
+		    	<div class="order"><!--Ширина 100%, высота-заданная, фон-прозрачный, цвет шрифта-черный-->					
+					<h2>Заинтересовались?</h2>
+					<!--в этом случае, согласно Б4 п.3 использование  тега <br> допустимо*/-->
+					<p>Укажите предполагаемые даты поездки,<br>
+					и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+					<a class="search" href="#">Поиск гостиницы в Седоне</a>
+					<form class="modal-order-form" action="#" method="post">
+						<table>
+							<tr>
+								<td class="first-column"><label for="d-date-id"> Дата заезда: </label></td>
+								<td colspan="3">
+									<input class="long" id="d-date-id" type="text" name="departure-date" value="24 апреля 2017">
+									<div class="calendar"></div>
+								</td>
+							</tr>	
+							<tr>			
+								<td class="first-column"><label for="a-date-id"> Дата выезда: </label></td>
+            					<td colspan="3">
+            						<input class="long" id="a-date-id" type="text" name="arrival-date" value="4 июля 2017">
+            						<div class="calendar"></div>            						
+            					</td>
+            				</tr>
+            				<tr>
+            					<td class="first-column">            						
+            						<label for="adults-id"> Взрослые: </label>            						
+            					</td>
+	            				<td class="people-quantity">
+	            					<button class="p-quantity minus" name="m" type="button" title="Уменьшить количество"></button>
+	            					<input class="short" id="adults-id" type="text" name="adults" value="2">
+	            					<button class="p-quantity plus" name="p" type="button" title="Увеличить количество"></button>
+	            				</td>
+	            				<td class="third-column">
+	            					<label for="children-id"> Дети: </label>
+	            				</td>
+	            				<td class="people-quantity">
+	            					<button class="p-quantity minus" name="m" type="button" title="Уменьшить количество"></button>
+	            					<input class="short" id="children-id" type="text" name="children" value="0">
+	            					<button class="p-quantity plus" name="p" type="button" title="Увеличить количество"></button>
+	            				</td>
+	            			</tr>
+            			</table>	
+            			<button class="modal-search" type="submit">Найти</button>            			
+	      			</form>				
+				</div>
+				<div class="map">
+					<img src="img/map5.jpg" alt="Изображение карты">
+				</div>
+	      	</main>   
+	               
+	        <footer class="main-footer clearfix">	      	
+		        <section class="footer-hashtag">
+		          	<a href="#">#visitsedona</a>
+		        </section>
+		        <section class="footer-social">
+			        <a class="social-btn social-btn-tw" href="#">
+			        	<!--<img src="img/t-logo.png" alt="Twitter">-->
+			        	Twitter	 
+			        </a>
+			        <a class="social-btn social-btn-fb" href="#">
+			        	<!--<img src="img/f-logo.png" alt="Facebook">-->
+			        	Facebook
+			        </a>
+			        <a class="social-btn social-btn-yt" href="#">
+			        	<!--<img src="img/y-logo.png" alt="YouTube">-->
+			        	YouTube
+			        </a>
+		        </section>
+		        <section class="footer-copyright">
+		          	<span class="creator">Website by</span>
+		          	<a class="btn" href="https://htmlacademy.ru">
+		          		<!--<img src="img/html-academy-logo.png" alt="HTML Academy">-->
+		          		Ссылка на сайт HTML Academy
+		          	</a>
+		        </section>	      	
+		    </footer>
+
+  		</div>
+  	</body>
 </html>
