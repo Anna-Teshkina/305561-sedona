@@ -42,6 +42,7 @@ body {
   } 
 
 /*СТИЛИ ДЛЯ ФОНА ГЛАВНОЙ СТРАНИЦЫ*/
+/*-----------------------------------------------------------------------*/
 .fone {
 	height: 509px;
 	/*outline: red solid;*/
@@ -72,7 +73,8 @@ body {
   }
   
   /*ОФОРМЛЕНИЕ ГЛАВНОЙ СТРАНИЦЫ*/
-  /*ЗАГОЛОВОК*/
+  /*ЗАГОЛОВОК. ОСНОВНАЯ НАВИГАЦИЯ*/
+  /*-----------------------------------------------------------------------*/
   header {
   	/*outline: red solid;*/
   	padding: 0;
@@ -131,6 +133,7 @@ body {
 }
 
 /*ЛОГОТИП*/
+/*-----------------------------------------------------------------------*/
 .index-logo {
 	/*outline: orange solid;*/	
 	margin: 0 auto;
@@ -142,6 +145,7 @@ body {
 }
 
 /*ОСНОВНОЙ БЛОК*/
+/*-----------------------------------------------------------------------*/
 main {
 	/*outline: blue solid;*/
 	padding: 0;
@@ -171,6 +175,7 @@ main {
 }
 
 /*ПРИЧИНА №1,2 ГОЛУБОЙ БЛОК*/
+/*-----------------------------------------------------------------------*/
 .block-blue {	
 	max-height: 256px;
 	background-color: #81b3d2;
@@ -190,7 +195,7 @@ main {
 }
 .block-blue .feature h4 {
 	margin-top: 55px;
-	padding: 0 125px;
+	padding: 0 120px;
 	margin-bottom: 21px;
 	/*outline: yellow solid;*/
 }
@@ -203,6 +208,7 @@ main {
 }
 
 /*БЛОК С РЕКОММЕНДАЦИЯМИ*/
+/*-----------------------------------------------------------------------*/
 .recommendations {
 	min-height: 330px;
 	/*outline: red solid;*/
@@ -224,6 +230,7 @@ main {
 }
 
 /*ПРИЧИНЫ №3-5, СЕРЫЙ БЛОК*/
+/*-----------------------------------------------------------------------*/
 .block-gray {
 	min-height: 256px;
 	background-color: #eeeeee;	
@@ -250,6 +257,7 @@ main {
 }
 
 /* ЗАИНТЕРЕСОВАЛИСЬ? = БЛОК ДЛЯ ВЫЗОВА ФОРМЫ ЗАКАЗА*/
+/*-----------------------------------------------------------------------*/
 .order {
 	/*outline: red solid;*/
 	position: relative;
@@ -280,52 +288,47 @@ main {
 	font-size: 21px;	
 }
 
+/*СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА*/
+/*-----------------------------------------------------------------------*/
 .modal-order-form {
 	position: absolute;
 	z-index: 1;
 	top: 235px;
-	left: 315px;
+	left: 316px;
 	width: 568px;
 	min-height: 396px;
 	padding: 55px;
 	background-color: white;
+	text-align: left;
+	line-height: 38px;
+	font-size: 14px;
+	font-weight: bold;
 	/*outline: red solid;*/
 }
 
-.modal-order-form table {
-	text-align: left; 
-	font-weight: bold;
-	line-height: 26px;
-	font-size: 14px;
-	margin: 0px;
-	padding: 0px;
-}
-
-.modal-order-form td {
-	width: 115.3px;
-	/*border: 2px solid gray;
-	border-collapse: collapse;*/
-}
-
-/*первая колонка*/
-.first-column {
-	width: 111px;
-	vertical-align: top;
-	padding-top: 6px;
-}
-
-.third-column {
-	vertical-align: top;
-	text-align: right;
-	padding-top: 6px;
-	padding-right: 25px;
-}
-
-.modal-order-form tr:nth-child(1) td:nth-child(2),
-.modal-order-form tr:nth-child(2) td:nth-child(2) {
+.modal-block-long {
+	/*outline: green solid;*/
+	margin-bottom: 30px;
 	position: relative;
+	height: 38px;
 }
 
+.modal-block-short {
+	display: inline-block;
+	vertical-align: top;
+	width: 227px;
+	/*outline: green solid;	*/
+	height: 38px;
+}
+
+.modal-block-name {
+	font-weight: bold;
+	/*outline: red solid;*/
+}
+
+.child-name {
+	padding-left: 50px;
+}
 
 .calendar {
 	display: block;
@@ -359,10 +362,10 @@ main {
 	width: 346px;
 	padding-right: 40px;
 	padding-left: 13px;
-	margin-bottom: 30px;
 	height: 38px;
 	right: 0;
 	background-color: #f2f2f2;
+	float: right;
 }
 
 .long:hover {
@@ -376,10 +379,11 @@ main {
 
 .people-quantity {
 	padding: 0;
-	background: yellow;
+	/*background: yellow;*/
 	height: 38px;
 	width: 115.3px;
 	background-color: #f2f2f2;
+	float: right;
 }
 
 .short {
@@ -465,7 +469,7 @@ main {
 	background-color: #81b3d2;
 }
 
-/*кнопка Найти*/
+/*кнопка Найти--------------------------------------------------------*/
 .modal-search {
 	display: block;
 	font: inherit;
@@ -491,7 +495,10 @@ main {
 	color: #88b6d1;
 	outline: 1px #5496bd solid;
 }
+
 /*КАРТА*/
+/*---------------------------------------------------------------------*/
+
 .map {
 	margin-bottom: 0px;
 	height: 473px;
@@ -499,6 +506,7 @@ main {
 }
 
 /*ПОДВАЛ*/
+/*----------------------------------------------------------------------*/
 .main-footer {
 	min-height: 120px;
 	/*outline: red solid;*/
@@ -639,6 +647,7 @@ main {
 
 
 /*РАСПОРКА*/
+/*-----------------------------------------------------------------------*/
 .clearfix::after {
 	content: "";
 	display: table;
@@ -646,6 +655,7 @@ main {
 }
 
 /*BOX-SIZING*/
+/*-----------------------------------------------------------------------*/
 *, *::before, *::after {
 	box-sizing: inherit;
 }
@@ -655,7 +665,9 @@ html {
 }
 
 /*ОФОРМЛЕНИЕ ВКЛАДКИ "ГОСТИНИЦЫ"*/
+/*-----------------------------------------------------------------------*/
 /*ФОРМА С ОТБОРОЧНЫМИ КРИТЕРИЯМИ*/
+/*-----------------------------------------------------------------------*/
 .criteria {
 	min-height: 217px;
 	/*outline: black solid;*/
@@ -710,14 +722,6 @@ html {
     background-position: -5px -37px;
 }
 
-.item-criterion input[type="checkbox"]:checked:active + label::before {
-	background-position: -98px -5px;
-}
-
-.item-criterion input[type="checkbox"]:active + label::before {
-	background-position: 5px -37px;
-}
-
 .item-criterion input[type="checkbox"]:disabled + label::before {
 	background-position: -41px -37px;
 }
@@ -727,6 +731,7 @@ html {
 }
 
 /*ВКЛАДКА HOTELS - ЦЕНОВОЙ ФИЛЬТР*/
+/*-----------------------------------------------------------------------*/
 .price-criterion {
 	width: 328px;
 	float: right;
@@ -875,6 +880,7 @@ html {
 }
 
 /*КАРТОЧКА ОТЕЛЯ*/
+/*-----------------------------------------------------------------------*/
 .hotel-card {
 	/*outline: red solid;*/
 	padding: 0px 71px 24px 73px;
@@ -943,6 +949,7 @@ html {
 	padding: 4.5px 17px;
 }
 /*кнопка ПОДРОБНЕЕ*/
+/*-----------------------------------------------------------------------*/
 .info-details {
 	background-color: #81b3d2;	
 }
@@ -956,6 +963,7 @@ html {
 	color: #94b9d2;
 }
 /*кнопка ЗАБРОНИРОВАТЬ*/
+/*-----------------------------------------------------------------------*/
 .booking-details {
 	background-color: #766357;	
 }
@@ -991,6 +999,7 @@ html {
 }
 
 /*ФИЛЬТР: кол-во результатов поиска/ сортировка/ навигационные клавиши*/
+/*-----------------------------------------------------------------------*/
 .filter {
 	min-height: 87px;
 	/*outline: pink solid;*/
@@ -1067,6 +1076,8 @@ html {
  	color: #000000;
  	border: none;
  }
+
+ /*НАВИГАЦИОННЫЕ СТРЕЛКИ*/
 
  .switch {
   	float: right;

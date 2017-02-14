@@ -3,8 +3,7 @@
   	<head>
     	<meta charset="utf-8">
     	<title>HTML Academy: Седона</title>
-    	<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;
-    	subset=cyrillic,cyrillic-ext" rel="stylesheet">
+    	<link href="https://fonts.googleapis.com/css?family=PT+Sans&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     	<!--<link href="fonts/ptsans.woff2, ptsansbold.woff2" rel="stylesheet">-->
     	<link href="css/normalize.css" rel="stylesheet">
     	<link href="css/style.css" rel="stylesheet">
@@ -81,7 +80,7 @@
 		    			<img src="img/reason-2.jpg" alt="Изображение-2">
 		    		</div>
 		    		<div class="feature"> <!--Блок с шириной 30% от родительского-->
-		    			<h4>Там есть мост дьявола</h4>	    			
+		    			<h4>Там есть <br> мост дьявола</h4>	    			
 		    			<span>&#8212; №2 &#8212;</span>			
 					    <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>		    		
 		    		</div>
@@ -111,40 +110,40 @@
 					и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 					<a class="search" href="#">Поиск гостиницы в Седоне</a>
 					<form class="modal-order-form" action="#" method="post">
-						<table>
-							<tr>
-								<td class="first-column"><label for="d-date-id"> Дата заезда: </label></td>
-								<td colspan="3">
-									<input class="long" id="d-date-id" type="text" name="departure-date" value="24 апреля 2017">
-									<div class="calendar"></div>
-								</td>
-							</tr>	
-							<tr>			
-								<td class="first-column"><label for="a-date-id"> Дата выезда: </label></td>
-            					<td colspan="3">
-            						<input class="long" id="a-date-id" type="text" name="arrival-date" value="4 июля 2017">
-            						<div class="calendar"></div>            						
-            					</td>
-            				</tr>
-            				<tr>
-            					<td class="first-column">            						
-            						<label for="adults-id"> Взрослые: </label>            						
-            					</td>
-	            				<td class="people-quantity">
-	            					<button class="p-quantity minus" name="m" type="button" title="Уменьшить количество"></button>
-	            					<input class="short" id="adults-id" type="text" name="adults" value="2">
-	            					<button class="p-quantity plus" name="p" type="button" title="Увеличить количество"></button>
-	            				</td>
-	            				<td class="third-column">
-	            					<label for="children-id"> Дети: </label>
-	            				</td>
-	            				<td class="people-quantity">
-	            					<button class="p-quantity minus" name="m" type="button" title="Уменьшить количество"></button>
-	            					<input class="short" id="children-id" type="text" name="children" value="0">
-	            					<button class="p-quantity plus" name="p" type="button" title="Увеличить количество"></button>
-	            				</td>
-	            			</tr>
-            			</table>	
+						<div class="modal-block-long">
+							<span class="modal-block-name">
+								<label for="d-date-id"> Дата заезда: </label>
+							</span>							
+							<input class="long" id="d-date-id" type="text" name="departure-date" value="24 апреля 2017">
+							<div class="calendar"></div>
+						</div>
+						<div class="modal-block-long">	
+							<span class="modal-block-name">
+								<label for="a-date-id"> Дата выезда: </label> 
+							</span>           					
+            				<input class="long" id="a-date-id" type="text" name="arrival-date" value="4 июля 2017">
+            				<div class="calendar"> </div>          						
+            			</div>            						
+            			<div class="modal-block-short">            				            				
+            				<span class="modal-block-name">
+            					<label for="adults-id"> Взрослые: </label>
+            				</span>        						
+            				<div class="people-quantity">
+	            				<button class="p-quantity minus" name="m" type="button" title="Уменьшить количество"></button>
+	            				<input class="short" id="adults-id" type="text" name="adults" value="2">
+	            				<button class="p-quantity plus" name="p" type="button" title="Увеличить количество"></button>
+	            			</div>
+	            		</div>
+	            		<div class="modal-block-short">		
+	            			<span class="modal-block-name child-name">	
+	            				<label for="children-id"> Дети: </label>
+	            			</span>
+	            			<div class="people-quantity">
+	            				<button class="p-quantity minus" name="m" type="button" title="Уменьшить количество"></button>
+	            				<input class="short" id="children-id" type="text" name="children" value="0">
+	            				<button class="p-quantity plus" name="p" type="button" title="Увеличить количество"></button>
+	            			</div>
+	            		</div>		
             			<button class="modal-search" type="submit">Найти</button>            			
 	      			</form>				
 				</div>
