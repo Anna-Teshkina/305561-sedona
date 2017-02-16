@@ -36,71 +36,76 @@ body {
   	background-color: #ffffff;
   	margin: 0 auto;
   	height: auto;
-  	/*outline: green solid;*/
-  	/*не знаю как корректно взять параметры тени из фотошопа:*/
-  	box-shadow: 0px 0px 20px 1px #cccbcb; 
+  	position: relative;
+  	box-shadow: 0px 5px 15px 0px rgba(0,0,0,0.2); 
   } 
 
 /*СТИЛИ ДЛЯ ФОНА ГЛАВНОЙ СТРАНИЦЫ*/
 /*-----------------------------------------------------------------------*/
-.fone {
-	height: 509px;
-	/*outline: red solid;*/
+.index-background {
 	position: relative;
 }
-  .background {
-  	position: absolute;  
-  	top: 0px;
-  	left: 0px; 
-  	z-index: 0;	
-  	/*outline: black solid;*/
-  }
 
-  .welcome {
-  	position: absolute;
-  	z-index: 1;  
-  	top: 76px;	
-  	left: 371px;
-  	/*outline: black solid;*/
-  }
+.index-background::before {
+	content: "";
+	position: absolute;
+	top: 76px;
+	left: 371px;
 
-  .angle {
-  	position: absolute;
-  	top: 451px;
-  	left: 0px;
-  	z-index: 1;
-  	/*outline: black solid;*/
-  }
+	background-image: url("../img/welcome.png");
+	background-repeat: no-repeat;
+	width: 458px;
+	height: 352px;
+}
+
+.index-background::after {
+	content: "";
+	position: absolute;
+	top: 451px;
+	left: 0px;
+
+	background-image: url("../img/angle.png");
+	background-repeat: no-repeat;
+	width: 1200px;
+	height: 57px;
+}
   
   /*ОФОРМЛЕНИЕ ГЛАВНОЙ СТРАНИЦЫ*/
   /*ЗАГОЛОВОК. ОСНОВНАЯ НАВИГАЦИЯ*/
   /*-----------------------------------------------------------------------*/
   header {
-  	/*outline: red solid;*/
+  	position: relative;
   	padding: 0;
   	margin: 0;
   }
 
 .main-navigation ul {
-	list-style: none;	
+	list-style: none;
 	padding: 0;
-    margin: 0;			
+    margin: 0;
 }
 
  .main-navigation li {
  	font-weight: bold;
-  	width: 20%;  	
-  	/*outline: yellow solid;*/
-  	padding: 14px 0;  		
+  	width: 20%;
+  	padding: 15px 0;
   }
+
+.main-navigation li:nth-child(3) {
+	width: 40%;
+}
+
+.main-navigation li:nth-child(4n+3) {
+	width: 40%;
+}
 
   .main-navigation li a {
   	text-decoration: none;
   	font-weight: bold;
-  	color: black;  	
+  	color: black;
   }
 
-  .main-navigation li:nth-child(n) a {
+  .main-navigation li a {
   	padding-left: 72px;
   }
 
@@ -122,32 +127,28 @@ body {
 	color: #766357;
 }
 
-.main-navigation li:nth-child(n) {
+.main-navigation li {
 	text-align: left;
 	float: left;
 } 
 
 .main-navigation li:nth-child(2n) {
-	text-align: right; 
+	text-align: right;
 	float: right;
 }
 
 /*ЛОГОТИП*/
 /*-----------------------------------------------------------------------*/
 .index-logo {
-	/*outline: orange solid;*/	
-	margin: 0 auto;
-	position: relative; /*Если я применяю позиционирование для логотипа то нарушается Б7?*/
+	position: absolute;
 	top: 0px;
+	left: 530px;
 	z-index: 1;
-	height: 56px;
-	width: 238px;
 }
 
 /*ОСНОВНОЙ БЛОК*/
 /*-----------------------------------------------------------------------*/
 main {
-	/*outline: blue solid;*/
 	padding: 0;
   	margin: 0;
 }
@@ -155,23 +156,20 @@ main {
  .advertise {
  	max-width: 576px;
  	margin: 0 auto;
- 	/*outline: yellow solid;*/
  	margin-bottom: 51px;
- 	margin-top: 59px;
+ 	margin-top: 51px;
  }
 
 .advertise span {
 	display: block;
 	font-size: 21px;
 	font-weight: bold;
-	margin-bottom: 27px;
-	/*outline: pink solid;*/
+	margin-bottom: 29px;
 }
 
 /*БЛОК 30% ОТ ШИРИНЫ РОДИТЕЛЬСКОГО КОНТЕЙНЕРА*/
 .feature {
 	width: 33.3%;		
-	/*outline: yellow solid;*/
 }
 
 /*ПРИЧИНА №1,2 ГОЛУБОЙ БЛОК*/
@@ -180,13 +178,11 @@ main {
 	max-height: 256px;
 	background-color: #81b3d2;
 	color: white;
-	/*outline: orange solid;*/
 }
 
 .image {
 	max-height: 256px;
 	width: 66.6%;	
-	/*outline: yellow solid;*/
 }
 
 .block-blue .image,
@@ -197,11 +193,9 @@ main {
 	margin-top: 55px;
 	padding: 0 120px;
 	margin-bottom: 21px;
-	/*outline: yellow solid;*/
 }
 
 .block-blue .feature p {
-	/*outline: solid green;*/
 	line-height: 21px;
 	margin-top: 20px;
 	padding: 0 47px;
@@ -211,7 +205,6 @@ main {
 /*-----------------------------------------------------------------------*/
 .recommendations {
 	min-height: 330px;
-	/*outline: red solid;*/
 }
 
 .recommendations .feature {
@@ -236,7 +229,6 @@ main {
 	background-color: #eeeeee;	
 	position: relative;
 	z-index: 2;
-	/*outline: red solid;*/
 }
 
 .block-gray .feature {
@@ -247,14 +239,12 @@ main {
 	margin-top: 48px;
 	margin-bottom: 21px;
 	padding: 0 130px;
-	/*outline: yellow solid;*/
 }
 
 .block-gray .feature p {
 	margin-top: 18px;
 	padding: 0 60px;
 	line-height: 21px;
-	/*outline: red solid;*/
 }
 
 /* ЗАИНТЕРЕСОВАЛИСЬ? = БЛОК ДЛЯ ВЫЗОВА ФОРМЫ ЗАКАЗА*/
@@ -264,7 +254,6 @@ main {
 	position: relative;
 	background-color: white;
 	z-index: 2;
-	/*outline: red solid;*/
 }
 
 .order h2 {
@@ -308,14 +297,22 @@ main {
 	line-height: 38px;
 	font-size: 14px;
 	font-weight: bold;
-	box-shadow: 0px 5px 20px 1px #cccbcb;
+	box-shadow: 0px 7px 15px 0px rgba(0,0,0,0.15);
+}
 
-	/*outline: 1px red solid;*/
+@-webkit-keyframes emergence {
+	0% { -webkit-transform: translateY(-400px); transform: translateY(-400px); }
+	100% { -webkit-transform: translateY(0px); transform: translateY(0px); }
 }
 
 @keyframes emergence {
 	0% { transform: translateY(-400px); }
 	100% { transform: translateY(0px); }
+}
+
+@-webkit-keyframes vanishing {
+	0% { -webkit-transform: translateY(0px); transform: translateY(0px); }
+	100% { -webkit-transform: translateY(-400px); transform: translateY(-400px); }
 }
 
 @keyframes vanishing {
@@ -324,19 +321,22 @@ main {
 }
 
 .emergence {
+	-webkit-animation-name: emergence;
 	animation-name: emergence;
-	animation-duration: 3s;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
 }
 
 .vanishing {
+	-webkit-animation-name: vanishing;
 	animation-name: vanishing;
-	/*animation-direction: alternate-reverse;*/
-	animation-duration: 3s;
+	-webkit-animation-duration: 0.5s;
+	animation-duration: 0.5s;
+	-webkit-animation-fill-mode: forwards;
 	animation-fill-mode: forwards;
 }
 
 .modal-block-long {
-	/*outline: green solid;*/
 	margin-bottom: 30px;
 	position: relative;
 	height: 38px;
@@ -346,13 +346,11 @@ main {
 	display: inline-block;
 	vertical-align: top;
 	width: 227px;
-	/*outline: green solid;	*/
 	height: 38px;
 }
 
 .modal-block-name {
 	font-weight: bold;
-	/*outline: red solid;*/
 }
 
 .child-name {
@@ -362,21 +360,21 @@ main {
 .calendar {
 	display: block;
 	position: absolute;
-	width: 21px;
+	width: 22px;
 	height: 22px;
 	background-image: url("../img/main-sprite.png");
 	background-repeat: no-repeat;
-	background-position: -67px -5px;
+	background-position: -137px -46px;
 	right: 9px;
 	top: 8px;
 }
 
 .calendar:hover {
-	background-position: -5px -5px;
+	background-position: -137px -8px;
 }
 
 .calendar:active {
-	background-position: -36px -5px;
+	background-position: -174px -8px;
 }
 
 .long, .short {	
@@ -408,7 +406,6 @@ main {
 
 .people-quantity {
 	padding: 0;
-	/*background: yellow;*/
 	height: 38px;
 	width: 115.3px;
 	background-color: #f2f2f2;
@@ -425,8 +422,6 @@ main {
 	vertical-align: top;
 	text-align: center; 
 	color: black;
-	/*margin-right: -3px;*/
-	/*outline: green solid;*/
 }
 
 .p-quantity {
@@ -435,9 +430,7 @@ main {
 	width: 37px;
 	height: 38px;
 	background: #f2f2f2;
-	/*margin-right: -4px;*/
 	border: none;
-	/*outline: green solid;*/
 	position: relative;
 }
 
@@ -456,6 +449,7 @@ main {
 	width: 12px;
     height: 3px;
     background-color: #a9a9a9;
+    -webkit-transform: translate(-6px, -1.5px);
     transform: translate(-6px, -1.5px);
 }
 
@@ -485,6 +479,7 @@ main {
 }
 
 .plus::after {
+	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
 }
 
@@ -523,7 +518,6 @@ main {
 .modal-search:focus {
 	background-color: #5496bd;
 	color: rgba(255, 255, 255, 0.3);
-	/*outline: 1px #5496bd solid;*/
 }
 
 /*КАРТА*/
@@ -531,10 +525,16 @@ main {
 
 .map {
 	margin-bottom: 0px;
-	height: 473px;
+	height: 594px;
 	z-index: 0;
 	position: relative;
-	/*outline: 1px green solid;*/
+}
+
+.img-map {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
 
 /*ПОДВАЛ*/
@@ -544,8 +544,11 @@ main {
 	min-height: 120px;
 	background-color: white;
 	opacity: 0.9;
-	
-	/*outline: red solid;*/
+}
+
+.footer-abs {
+	position: absolute;
+	bottom: 0;	
 }
 
 .footer-hashtag a {
@@ -554,7 +557,6 @@ main {
 	line-height: 26px;
 	font-weight: bold;
 	color: black;
-	/*outline: red solid;*/
 }
 
 .footer-hashtag {
@@ -573,7 +575,6 @@ main {
 .creator {
 	display: inline-block;
 	vertical-align: top;
-	/*outline: blue solid;*/
 	margin-top: 44px;
 	margin-left: 103px;
 	line-height: 26px;
@@ -584,9 +585,8 @@ main {
 	position: absolute;
 	top: 39px;
 	left: 184px;
-	/*outline: green solid;*/
-	background-image: url("../img/html-ac-sprite1.png");
-	background-position: -265px -8px;
+	background-image: url("../img/main-sprite.png");
+	background-position: -8px -118px;
     background-repeat: no-repeat;
     display: block;
     font-size: 0px;
@@ -595,11 +595,11 @@ main {
 }
 
 .btn:hover {
-	background-position: -7px -8px;
+	background-position: -8px -8px;
 }
 
 .btn:active {
-	background-position: -136px -8px;
+	background-position: -8px -63px;
 }
 
 .footer-hashtag,
@@ -607,7 +607,6 @@ main {
 .footer-copyright {
 	width: 33.3%;
 	float: left;
-	/*outline: yellow solid;*/
 }
 
 .social-btn {
@@ -615,13 +614,11 @@ main {
   	width: 46px;
   	height: 48px;
   	margin-right: 2px;
- 	/* margin-top: 27px;*/
   	font-size: 0;
   	vertical-align: top;
   	text-decoration: none;
   	background-color: #81b3d2; 
   	position: relative;
-  	/*outline: green solid;*/
 }
 
 .social-btn:hover {
@@ -637,19 +634,16 @@ main {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	/*transform: translate(-50%; -50%); - почему-то не работает с %*/
 	background-image: url("../img/main-sprite.png");
 	background-repeat: no-repeat;
-	/*width: 10px;
-	height: 10px;
-	background-color: red;*/
 }
 
 /*Twitter*/
 .social-btn-tw::before {
 	width: 17px;
     height: 15px;
-    background-position: -105px -34px;
+    background-position: -179px -147px;
+    -webkit-transform: translate(-8.5px, -7.5px);
     transform: translate(-8.5px, -7.5px);
 }
 
@@ -661,7 +655,8 @@ main {
 .social-btn-fb::before {
 	width: 10px;
     height: 19px;
-    background-position: -119px -5px;
+    background-position: -206px -112px;
+    -webkit-transform: translate(-5px, -9.5px);
     transform: translate(-5px, -9.5px);
 }
 
@@ -673,7 +668,8 @@ main {
 .social-btn-yt::before {
 	width: 20px;
     height: 16px;
-    background-position: -5px -119px;
+    background-position: -62px -173px;
+    -webkit-transform: translate(-10px, -8px);
     transform: translate(-10px, -8px);
 }
 
@@ -706,7 +702,6 @@ html {
 /*-----------------------------------------------------------------------*/
 .criteria {
 	min-height: 217px;
-	/*outline: black solid;*/
 	padding: 0px 71px;
 	background: url("../img/filter-background-3.jpg") no-repeat;
 	color: #ffffff;
@@ -715,7 +710,6 @@ html {
 .item-criterion {
 	width: 255px;
 	float: left;
-	/*outline: yellow solid;*/
 	vertical-align: middle;	
 	text-align: left;
 	margin: 0;
@@ -733,7 +727,6 @@ html {
 
 .item-criterion input[type="checkbox"] + label {
 	display: block;
-	/*margin: 10px 0px;*/
 	line-height: 20px;
 	padding-left: 42px;
 	padding-bottom: 25px;
@@ -751,19 +744,19 @@ html {
     height: 22px;
     background-image: url("../img/main-sprite.png");
     background-repeat: no-repeat;
-    background-position: -5px -37px;
+    background-position: -174px -46px;
 }
 
 .item-criterion input[type="checkbox"]:checked+ label::before {
-    background-position: -37px -37px;
+    background-position: -137px -84px;
 }
 
 .item-criterion input[type="checkbox"]:disabled + label::before {
-	background-position: -73px -37px;
+	background-position: -137px -122px;
 }
 
 .item-criterion input[type="checkbox"]:checked:disabled + label::before {
-	background-position: -5px -69px;
+	background-position: -137px -160px;
 }
 
 /*ВКЛАДКА HOTELS - ЦЕНОВОЙ ФИЛЬТР*/
@@ -771,7 +764,6 @@ html {
 .price-criterion {
 	width: 328px;
 	float: right;
-	/*outline: yellow solid;*/
 	text-align: left;
 }
 
@@ -806,6 +798,7 @@ html {
     height: 22px;
 
     background: #ffffff;
+    -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
 }
 
@@ -823,7 +816,6 @@ html {
 .price-controls .max-price {
   	height: 36px;
   	width: 157px;
-  	/*outline: red solid;*/
 }
 
 .price-controls .min-price {
@@ -844,7 +836,6 @@ html {
 
   	background: none;
   	border: none;
-  	/*outline: grey solid;*/
 }
 
 .range-controls {
@@ -918,7 +909,6 @@ html {
 /*КАРТОЧКА ОТЕЛЯ*/
 /*-----------------------------------------------------------------------*/
 .hotel-card {
-	/*outline: red solid;*/
 	padding: 0px 71px 24px 73px;
 	border-bottom: 1px solid #e5e5e5;
 }
@@ -939,14 +929,12 @@ html {
 .right-side {
 	float: right;
 	margin-top: 25px;
-	/*outline: green solid;*/
 	max-height: 90px;
 }
 
 .left-side {
 	float: left;
 	margin-top: 26px;
-	/*outline: green solid;*/
 	min-height: 100px;
 	min-width: 250px;
 }
@@ -958,7 +946,6 @@ html {
 	text-align: left;	
 	float: left;
 	margin-right: 2px;
-	/*outline: yellow solid;*/
 }
 
 .hotel-picture {
@@ -966,14 +953,12 @@ html {
 	margin-right: 30px;
 	max-height: 90px;
 	float: left;
-	/*outline: yellow solid;*/
 }
 
 .hotel-card h3 {
 	text-align: left;
 	line-height: 21px;
 	margin: 0px;	
-	/*outline: red solid;*/
 	padding-bottom: 8px;
 }
 
@@ -1025,21 +1010,18 @@ html {
 	margin-top: 38px;
 	background-color: #f2f2f2;
 	padding: 1.5px 15px;
-	/*outline: yellow solid;*/
 }
 
 .hotel-stars {
 	text-align: right;
 	margin-top: 3px;
 	margin-left: 6px;
-	/*outline: yellow solid;*/
 }
 
 /*ФИЛЬТР: кол-во результатов поиска/ сортировка/ навигационные клавиши*/
 /*-----------------------------------------------------------------------*/
 .filter {
 	min-height: 87px;
-	/*outline: pink solid;*/
 	padding: 0px 73px;
 	border-bottom: 1px solid #e5e5e5;
 }
@@ -1054,17 +1036,17 @@ html {
 	display: inline-block;
 	vertical-align: middle;
 	margin-right: 47px;
-	/*outline: green solid;*/
 }
 
 .filter-types {
 	margin-top: 30px;	
 	padding: 0;
 	float: left;
-	/*outline: green solid;*/
 }
 
-.filter .filter-types .type-active {
+.filter-types .type-active,
+.filter-types .type-active:hover,
+.filter-types .type-active:active {
 	color: #81b3d2;
 	border: none;
 }
@@ -1081,36 +1063,32 @@ html {
 
  .filter-types li {  	
  	display: inline-block;
-  	margin-right: 30px;
-  	/*outline: yellow solid; */	
+  	margin-right: 30px;	
  }
 
  .filter-types li:last-child {
  	margin-right: 0px;
  }
-
- .filter-types li:first-child a {
- 	color: black;
- }
-
- .filter-types li:nth-child(2) a,
- .filter-types li:nth-child(3) a,
- .filter-types li:nth-child(4) a {
+ 
+ .filter-types li a {
  	color: #cacaca;
  	border-bottom: 1px dotted #81b3d2;
  }
 
- .filter-types li:nth-child(2):hover a,
- .filter-types li:nth-child(3):hover a,
- .filter-types li:nth-child(4):hover a {
+ .filter-types li a:hover {
  	color: #81b3d2;
  	border-bottom: 1px dotted #81b3d2;
  }
 
-.filter-types li:nth-child(2):active a,
-.filter-types li:nth-child(3):active a,
-.filter-types li:nth-child(4):active a {
+.filter-types li a:active {
  	color: #000000;
+ 	border: none;
+ }
+
+ .filter-types li:first-child a,
+ .filter-types li:first-child a:hover,
+ .filter-types li:first-child a:active {
+ 	color: black;
  	border: none;
  }
 
@@ -1118,7 +1096,6 @@ html {
 
  .switch {
   	float: right;
-  	/*outline: yellow solid;*/
   	margin-top: 30px;
 }
 
@@ -1129,43 +1106,39 @@ html {
 }
 
 .switch .active {
-	background-position: -101px -69px;
+	background-position: -206px -86px;
 }
 
 .up,
 .down {
 	width: 11px;
     height: 10px;
-	/*outline: gray solid;*/
 	background-image: url("../img/main-sprite.png");
 	background-repeat: no-repeat;
 }
 
 .up {
-	background-position: -122px -99px;
-	/*outline: green solid;*/
+	background-position: -35px -173px;
 	padding-right: 12px;
 }
 
 .up:hover {
-	background-position: -122px -59px;
+	background-position: -212px -147px;
 }
 
 .up:active {
-	background-position: -122px -79px;
+	background-position: -8px -173px;
 }
 
 
 .down {
-	background-position: -101px -89px;
-	/*outline: red solid;*/
-	/*margin-right: 12px;*/
+	background-position: -179px -112px;
 }
 
 .down:hover {
-	background-position: -98px -5px;
+	background-position: -179px -86px;
 }
 
 .down:active {
-	background-position: -101px -69px;
+	background-position: -206px -86px;
 }
