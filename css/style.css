@@ -99,31 +99,27 @@ body {
 	width: 40%;
 }
 
-  .main-navigation li a {
+  .main-navigation a {
   	text-decoration: none;
   	font-weight: bold;
   	color: black;
   }
 
-  .main-navigation li a {
+  .main-navigation a {
   	padding-left: 72px;
   }
 
-  .main-navigation li:nth-child(2n) a {
-  	padding-right: 72px;
-  }
-
-  .main-navigation li a:hover {
+  .main-navigation a:hover {
   	color: #81b3d2;
   }
 
-  .main-navigation li a:active {
+  .main-navigation a:active {
   	color: #cacaca;
   }
 
-.main-navigation li .main-navigation-active,
-.main-navigation li .main-navigation-active:hover,
-.main-navigation li .main-navigation-active:active {
+.main-navigation .main-navigation-active,
+.main-navigation .main-navigation-active:hover,
+.main-navigation .main-navigation-active:active {
 	color: #766357;
 }
 
@@ -133,6 +129,7 @@ body {
 } 
 
 .main-navigation li:nth-child(2n) {
+	padding-right: 72px;
 	text-align: right;
 	float: right;
 }
@@ -189,13 +186,13 @@ main {
 .block-blue .feature {
 	float: left;
 }
-.block-blue .feature h4 {
+.block-blue h4 {
 	margin-top: 55px;
 	padding: 0 120px;
 	margin-bottom: 21px;
 }
 
-.block-blue .feature p {
+.block-blue p {
 	line-height: 21px;
 	margin-top: 20px;
 	padding: 0 47px;
@@ -212,12 +209,12 @@ main {
 	padding-top: 55px;
 }
 
-.recommendations .feature h4 {
+.recommendations h4 {
 	margin-top: 22px;
 	margin-bottom: 24px;
 }
 
-.recommendations .feature p {
+.recommendations p {
 	line-height: 21px;
 	padding: 0 55px;
 }
@@ -235,13 +232,13 @@ main {
 	float: left;
 }
 
-.block-gray .feature h4 {
+.block-gray h4 {
 	margin-top: 48px;
 	margin-bottom: 21px;
 	padding: 0 130px;
 }
 
-.block-gray .feature p {
+.block-gray p {
 	margin-top: 18px;
 	padding: 0 60px;
 	line-height: 21px;
@@ -266,19 +263,17 @@ main {
 }
 
 .order .search {
+	text-decoration: none;	
+	font-weight: bold;
+	line-height: 25px;
+	font-size: 21px;
+
 	display: inline-block;
 	vertical-align: top;
 	min-width: 568px;	
 	padding: 31px 0;
 	background-color: #766357;
 	color: white;	
-}
-
-.order a {
-	text-decoration: none;	
-	font-weight: bold;
-	line-height: 25px;
-	font-size: 21px;
 }
 
 /*СТИЛИ ДЛЯ МОДАЛЬНОГО ОКНА*/
@@ -513,11 +508,13 @@ main {
 
 .modal-search:hover {
 	background-color: #669ec0;
+	cursor: pointer;
 }
 
 .modal-search:focus {
 	background-color: #5496bd;
 	color: rgba(255, 255, 255, 0.3);
+	cursor: pointer;
 }
 
 /*КАРТА*/
@@ -611,11 +608,11 @@ main {
 
 .social-btn {
   	display: inline-block;
+  	vertical-align: top;
   	width: 46px;
   	height: 48px;
   	margin-right: 2px;
   	font-size: 0;
-  	vertical-align: top;
   	text-decoration: none;
   	background-color: #81b3d2; 
   	position: relative;
@@ -703,7 +700,7 @@ html {
 .criteria {
 	min-height: 217px;
 	padding: 0px 71px;
-	background: url("../img/filter-background-3.jpg") no-repeat;
+	background: #6e90ae url("../img/filter-background-3.jpg") no-repeat;
 	color: #ffffff;
 }
 
@@ -717,7 +714,7 @@ html {
 }
 
 .item-criterion h5 {
-	margin-bottom: 25px;
+	margin-bottom: 26px;
 }
 
 .item-criterion input[type="checkbox"] {
@@ -728,7 +725,7 @@ html {
 .item-criterion input[type="checkbox"] + label {
 	display: block;
 	line-height: 20px;
-	padding-left: 42px;
+	padding-left: 40px;
 	padding-bottom: 25px;
 	position: relative;
 	cursor: pointer;
@@ -768,7 +765,7 @@ html {
 }
 
 .price-criterion h5 {
-  	margin-bottom: 9px;
+  	margin-bottom: 12px;
 
     font-weight: 600;
     font-size: 16px;
@@ -804,10 +801,11 @@ html {
 
 .price-controls label {
   	display: inline-block;
+  	vertical-align: top;
 
   	font-size: 14px;
-  	line-height: 38px;
-  	vertical-align: top;
+  	line-height: 36px;
+  	margin-top: -2px;
 
   	cursor: pointer;
 }
@@ -828,7 +826,7 @@ html {
 
 .price-controls input {
   	width: 50px;
- 	height: 36px;
+ 	height: 34px;
  	margin: 0;
 
   	color: inherit;
@@ -1001,6 +999,7 @@ html {
 
 .type-price {
 	display: inline-block;
+	vertical-align: top;
 	padding-bottom: 13px;
 }
 
@@ -1022,7 +1021,7 @@ html {
 /*-----------------------------------------------------------------------*/
 .filter {
 	min-height: 87px;
-	padding: 0px 73px;
+	padding: 30px 73px;
 	border-bottom: 1px solid #e5e5e5;
 }
 
@@ -1032,29 +1031,32 @@ html {
 
 .filter-quantity {
 	float: left;
-	margin-top: 30px;
-	display: inline-block;
-	vertical-align: middle;
-	margin-right: 47px;
+	margin: 0;
 }
 
 .filter-types {
-	margin-top: 30px;	
+	text-align: left;
 	padding: 0;
+	margin: 0;
 	float: left;
+	margin-left: 47px;
+	margin-right: 100px;
+	max-width: 730px;
 }
 
-.filter-types .type-active,
-.filter-types .type-active:hover,
-.filter-types .type-active:active {
+.filter .type-active,
+.filter .type-active:hover,
+.filter .type-active:active {
 	color: #81b3d2;
 	border: none;
 }
 
- .filter-types li a {
+ .filter-types a {
   	font-size: 12px;
   	line-height: 18px;
-  	text-decoration: none;  	
+  	text-decoration: none;
+  	color: #cacaca;
+ 	border-bottom: 1px dotted #81b3d2;	
  }
 
  .filter-types li:first-child {
@@ -1063,31 +1065,27 @@ html {
 
  .filter-types li {  	
  	display: inline-block;
-  	margin-right: 30px;	
+ 	vertical-align: top;
+  	margin-right: 30px;
  }
 
  .filter-types li:last-child {
  	margin-right: 0px;
  }
- 
- .filter-types li a {
- 	color: #cacaca;
- 	border-bottom: 1px dotted #81b3d2;
- }
 
- .filter-types li a:hover {
+ .filter-types a:hover {
  	color: #81b3d2;
  	border-bottom: 1px dotted #81b3d2;
  }
 
-.filter-types li a:active {
+.filter-types a:active {
  	color: #000000;
  	border: none;
  }
 
- .filter-types li:first-child a,
- .filter-types li:first-child a:hover,
- .filter-types li:first-child a:active {
+ .filter .sort,
+ .filter .sort:hover,
+ .filter .sort:active {
  	color: black;
  	border: none;
  }
@@ -1096,7 +1094,6 @@ html {
 
  .switch {
   	float: right;
-  	margin-top: 30px;
 }
 
 .switch a {
