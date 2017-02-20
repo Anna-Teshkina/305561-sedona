@@ -167,7 +167,7 @@ body {
 	width: 33.3%;
 }
 
-.feature h3 {
+.feature h2 {
 	font-size: 21px;
 	line-height: 21px;
 }
@@ -196,7 +196,7 @@ body {
 	float: left;
 }
 
-.block-blue h3 {
+.block-blue h2 {
 	margin-top: 55px;
 	margin-bottom: 21px;
 	padding: 0 120px;
@@ -228,7 +228,7 @@ body {
 	padding-top: 55px;
 }
 
-.recommendations h3 {
+.recommendations h2 {
 	margin: 0 30px;
 	margin-top: 22px;
 	margin-bottom: 24px;
@@ -257,7 +257,7 @@ body {
 	float: left;
 }
 
-.block-gray h3 {
+.block-gray h2 {
 	margin-top: 48px;
 	margin-bottom: 21px;
 	padding: 0 130px;
@@ -827,13 +827,13 @@ html {
 .criteria {
 	min-height: 217px;
 	padding: 0 72px;
-	padding-top: 12px;
+	padding-top: 14px;
 
 	color: #ffffff;
 	background: #6e90ae url("../img/filter-background-3.jpg") no-repeat;
 }
 
-.criteria h3 {
+.criteria h2 {
 	font-size: 16px;
 	line-height: 21px;
 }
@@ -849,8 +849,8 @@ html {
 	vertical-align: middle;
 }
 
-.item-criterion h3 {
-	margin-bottom: 25px;
+.item-criterion h2 {
+	margin-bottom: 26px;
 }
 
 .item-criterion input[type="checkbox"] {
@@ -909,7 +909,7 @@ html {
 	text-align: left;
 }
 
-.price-criterion h3 {
+.price-criterion h2 {
 	margin-bottom: 10px;
 }
 
