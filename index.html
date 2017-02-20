@@ -9,9 +9,9 @@
 	</head>
 	<body>
 		<div class="main-container">
-			<header class="main-header clearfix">
+			<header class="main-header">
 				<nav class="main-navigation">
-					<ul>
+					<ul class="clearfix">
 						<li>
 							<a href="#"> Информация </a>
 						</li>
@@ -46,7 +46,7 @@
 
 				<div class="block-blue clearfix">
 					<div class="feature">
-						<h4> Настоящий городок </h4>
+						<h3> Настоящий городок </h3>
 						<span> &#8212; №1 &#8212; </span>
 						<p> Седона &#8212; не аттракцион для туристов,
 						там течет своя жизнь </p>
@@ -60,17 +60,17 @@
 				<div class="recommendations clearfix">
 					<div class="feature">
 						<img src="img/house1.png" width="76" height="76" alt="Жилье">
-						<h4> Жилье </h4>
+						<h3> Жилье </h3>
 						<p> Рекомендуем пожить в настоящем мотеле, все как в кино! </p>
 					</div>
 					<div class="feature">
 						<img src="img/food1.png" width="76" height="76" alt="Еда">
-						<h4> Еда </h4>
+						<h3> Еда </h3>
 						<p> Всегда заказывайте фирменный бургер, вы не разочаруетесь! </p>
 					</div>
 					<div class="feature">
 						<img src="img/souvenirs1.png" width="76" height="76" alt="Сувениры">
-						<h4> Сувениры </h4>
+						<h3> Сувениры </h3>
 						<p> Не только китайского, но и местного производства! </p>
 					</div>
 				</div>
@@ -80,7 +80,7 @@
 						<img src="img/reason-2.jpg" width="800" height="256" alt="Изображение-2">
 					</div>
 					<div class="feature">
-						<h4> Там есть <br> мост дьявола </h4>
+						<h3> Там есть <br> мост дьявола </h3>
 						<span> &#8212; №2 &#8212; </span>
 						<p> Да, по нему можно пройти! Если конечно вы осмелитесь </p>
 					</div>
@@ -88,17 +88,17 @@
 
 				<div class="block-gray clearfix">
 					<div class="feature">
-						<h4> Небольшая площадь </h4>
+						<h3> Небольшая площадь </h3>
 						<span> &#8212; №3 &#8212; </span>
 						<p> Все достопримечательности находятся очень близко </p>
 					</div>
 					<div class="feature">
-						<h4> Красивая дорога </h4>
+						<h3> Красивая дорога </h3>
 						<span> &#8212; №4 &#8212; </span>
 						<p> Ехать в Седону из Лас-Вегаса совсем не скучно! </p>
 					</div>
 					<div class="feature">
-						<h4> Мало туристов </h4>
+						<h3> Мало туристов </h3>
 						<span> &#8212; №5 &#8212; </span>
 						<p> Большинство едет в Гранд каньон и толпится там </p>
 					</div>
@@ -111,30 +111,31 @@
 				</div>
 
 				<div class="map">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d839449.138613796!2d-111.82500800082938!3d34.72791908865979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1487155406762" width="1200" height="593" style="border:0" allowfullscreen></iframe>
+					<iframe class="hidden" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d839449.138613796!2d-111.82500800082938!3d34.72791908865979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1487155406762" width="1200" height="593" style="border:0" allowfullscreen></iframe>
+
 					<img src="img/map.jpg" width="1200" height="593" alt="Изображение карты">
 
 					<form class="modal-order-form emergence" action="#" method="post">
 						<div class="modal-block-long">
-							<span class="modal-block-name">
-								<label for="d-date-id"> Дата заезда: </label>
-							</span>
+							<label class="modal-block-name" for="d-date-id">
+								Дата заезда:
+							</label>
 							<input class="long" id="d-date-id" type="text" name="departure-date" value="24 апреля 2017">
 							<button class="calendar" name="c" type="button"></button>
 						</div>
 
-						<div class="modal-block-long">	
-							<span class="modal-block-name">
-								<label for="a-date-id"> Дата выезда: </label>
-							</span>
+						<div class="modal-block-long">
+							<label class="modal-block-name" for="a-date-id">
+								Дата выезда:
+							</label>
 							<input class="long" id="a-date-id" type="text" name="arrival-date" value="4 июля 2017">
 							<button class="calendar" name="c" type="button"></button>
 						</div>
 
 						<div class="modal-block-short adults">
-							<span class="modal-block-name">
-								<label for="adults-id"> Взрослые: </label>
-							</span>
+							<label class="modal-block-name" for="adults-id">
+								Взрослые:
+							</label>
  							<div class="people-quantity">
 								<button class="p-quantity minus" name="m" type="button" title="Уменьшить количество"></button>
 								<input class="short" id="adults-id" type="text" name="adults" value="2">
@@ -143,9 +144,9 @@
 						</div>
 
 						<div class="modal-block-short child">
-							<span class="modal-block-name child-name">
-								<label for="children-id"> Дети: </label>
-							</span>
+							<label class="modal-block-name child-name" for="children-id">
+								Дети:
+							</label>
 							<div class="people-quantity">
 								<button class="p-quantity minus" name="m" type="button" title="Уменьшить количество"></button>
 								<input class="short" id="children-id" type="text" name="children" value="0">
@@ -167,7 +168,7 @@
 					<a class="social-btn social-btn-yt" href="#"> YouTube </a>
 				</div>
 				<div class="footer-copyright">
-					<span class="creator"> Website by </span>
+					Website by
 					<a class="btn" href="https://htmlacademy.ru">
 						Ссылка на сайт HTML Academy
 					</a>

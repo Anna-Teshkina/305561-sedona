@@ -10,6 +10,8 @@ var pl_ch = popup.querySelector(".child .plus");
 var min_ch = popup.querySelector(".child .minus");
 var q_ch = popup.querySelector(".child .short");
 
+var iframe = document.querySelector('.map iframe');
+var map = document.querySelector('.map img');
 
 /*МОДАЛЬНОЕ ОКНО. АНИМАЦИЯ*/
 depdate.focus();
@@ -53,3 +55,7 @@ pl_ch.addEventListener("click", function(event) {
     event.preventDefault();
     q_ch.value=parseInt(q_ch.value)+1;
 });
+
+/*КАРТА*/
+iframe.classList.remove("hidden");
+map.classList.add("hidden");
